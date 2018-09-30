@@ -1,9 +1,7 @@
 # Proj2-Tariffs
 Critilytics Project Team's visualizations of the impact of recent Tariffs on US Imports and Exports
-
 #Team Members: Adrienne, LaKeisha, Pride, Sanhita, Solanda, Wusi
 
-# 
 ###Objective: 
 The objective is to analyze the export and import trade volume data between US and other countries.
 
@@ -27,7 +25,6 @@ The outcome will be a website with the following pages.
   o	A selection of commodities(5)
   o	A selection of years(3)
   o	When selected and searched, the results of the trade volume will be displayed based on the search criteria. The display format will be either in the form of a table or it will be a visual representation.
-  
 •	Data Landing Page – Will display a sample dataset
 •	Visualization Page – Will display a visual representation of the trade flow analysis with a flow map
 •	Navigation: All pages will have a common navigation menu(if possible will have a location-based breadcrumb feature)
