@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<title>U.S. Trade Relations</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+crossorigin=""></script>
+
+<style>
+body, html {
+    height: 100%;
+    font-family: "Inconsolata", sans-serif;
+}
+.bgimg {
+    background-position: center;
+    background-size: cover;
+    background-image: url('http://www.tradeglobal.com/wp-content/uploads/2017/11/blog-selling-to-the-world.png'); 
+    min-height: 75%;
+}
+.menu {
+    display: none;
+}
+.bodytext {
+    width: 1200px;
+    height: 200px;
+    margin: 50px auto;
+    padding-top: 15px;
+    background: lightslategray;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+  }
+</style>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="tryw3css_templates_cafe.html" class="w3-button w3-block w3-black">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="map.html" class="w3-button w3-block w3-black">Trade Map</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="trade_flow.html" class="w3-button w3-block w3-black">Trade Flow</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="search.html" class="w3-button w3-block w3-black">Search the Data</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white" style="font-size:83px">U.S.<br>TRADE RELATIONS</span>
+  </div>
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-text-white">CRITILYTICS</span>
+  </div>
+</header>
+<div class="w3-sand w3-grayscale w3-large"></div>
+  <div class="bodytext" data-aos="fade-up">
+      <h1 class="title">What is International Trade?</h1>
+      <p class='category'>International trade increases the number of goods that domestic consumers can choose from, decreases the cost of those goods through increased competition, and allows domestic industries to ship their products abroad.</p>
+  </div>
+  <div class="bodytext" data-aos="fade-down">
+      <h1 class='title'>What are Exports and Imports?</h1>
+      <p class='category'>A product that is sold to the global market is an export, and a product that is bought from the global market is an import.</p>
+  </div>
+  <div class="bodytext" data-aos="fade-right">
+      <h1 class='title'>What is a Tariff?</h1>
+      <p class='category'>In simplest terms, a tariff is a tax. It adds to the cost of imported goods and is one of several trade policies that a country can enact.</p>
+  </div>
+  <div class="bodytext" data-aos="fade-left">
+      <h1 class='title'>Who Collects a Tariff?</h1>
+      <p class='category'>Tariffs are paid to the customs authority of the country imposing the tariff. Tariffs on imports coming into the United States, for example, are collected by Customs and Border Protection, acting on behalf of the Commerce Department. In the U.K., it's HM Revenue & Customs (HMRC) that collects the money.</p>
+  </div>
+  <div class="bodytext" data-aos="zoom-in">
+      <h1 class='title'>Why are Tarriffs and Trade Barriers Used?</h1>
+      <p class='category'>Tariffs are often created to protect infant industries and developing economies but are also used by more advanced economies with developed industries.</p>
+  </div>
+  <div class="bodytext" data-aos="flip-up">
+      <h1 class='category'>Who Benefits?</h1>
+      <p class='category'>The benefits of tariffs are uneven. Because a tariff is a tax, the government will see increased revenue as imports enter the domestic market. Domestic industries also benefit from a reduction in competition, since import prices are artificially inflated. Unfortunately for consumers - both individual consumers and businesses - higher import prices mean higher prices for goods.</p>
+  </div>
+  <div class="bodytext" data-aos="flip-down">
+      <h1 class='title'>The Data</h1>
+      <p class='category'>The purpose of this project is to visualize the effect of tariffs on US Imports and Exports. Data was collected from the United States International Trade Commission DataWeb.</p>
+  </div>               
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  <p>Powered by CRITILYTICS</p>
+</footer>
+</body>
+</html>

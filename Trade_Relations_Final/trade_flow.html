@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link href="chord_style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <title>Trade Flow</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+<body>   
+    <div class="w3-row"></div>
+    <h1>The United States International Trade Flow</h1>
+<div>   
+    <div id="chart_placeholder"></div>
+         
+    <div id="yearbuttons">
+            <button id="seventeen" class="current">2017</button>
+            <button id="eighteen" class="">2018</button>
+    
+    </div>
+<!--This script is to highlight each year button while on it-->
+<script type="text/javascript">
+                   $('#yearbuttons button').on('click', function(){
+                        $('button.current').removeClass('current');
+                        $(this).addClass('current');
+                   });
+</script>
+<!--The data comes from FAO Yearbooks on fisheries http://www.fao.org/fishery/publications/yearbooks/en-->
+<!--Created by Luz K. Molina, www.databayou.com-->
+
+<div id="legend">
+
+        <table class="table1">
+                  <tr>
+            <td bgcolor="#FFFFFF" width="10%">
+                      </td>
+                      <td width="90%"><h3>Regions</h3>
+                       </td>  
+          </tr>
+          <tr>
+            <td bgcolor="#8dd3c7" width="10%">
+                      </td>
+                      <td><a class="two" id="NA" href = "#">Africa</a>
+                          <table class="table2">
+                              <tr>
+                                  <td><h3>Countries/Regions</h3></td>
+                              </tr>
+                              <tr>
+                                  <td width="50%">Algeria<br>Angola<br>Benin<br>Botswana<br>Burkina Faso<br>Burundi<br>Cameroon<br>Cape Verde<br>Cen African Rep<br>Chad<br>Comoros<br>Congo (DROC)<br>Congo (ROC)<br>Cote d`Ivoire<br>Djibouti<br>Egypt<br>Eq Guinea<br>Eritrea<br>Ethiopia<br>Gabon<br>Gambia<br>Ghana<br>Guinea<br>Guinea-Bissau<br>Kenya<br>Lesotho<br>Liberia<br>Libya</td>
+                                  <td width="50%">Madagascar<br>Malawi<br>Mali<br>Mauritania<br>Mauritius<br>Mayotte<br>Morocco<br>Mozambique<br>Namibia<br>Niger<br>Nigeria<br>Reunion<br>Rwanda<br>Sao Tome & Prin<br>Senegal<br>Seychelles<br>Sierra Leone<br>Somalia<br>South Africa<br>South Sudan<br>Sudan<br>Swaziland<br>Tanzania<br>Togo<br>Tunisia<br>Uganda<br>Zambia<br>Zimbabwe</td>
+                              </tr>
+                          </table>
+                       </td>  
+          </tr> 
+                  <tr>
+            <td bgcolor="#ffffb3">
+                      </td>
+                      <td><a class="two" id="NA" href = "#">Australia and Oceania</a>
+                           <table class="table2">
+                              <tr>
+                                  <td><h3>Countries/Regions</h3></td>
+                              </tr>
+                              <tr>  <td>Australia<br>F St Micronesia<br>Fiji<br>Kiribati<br>Marshall Is<br>Nauru<br>New Zealand<br>Palau<br>Papua New Guin<br>Samoa<br>Solomon Is<br>Tonga<br>Tuvalu<br>Vanuatu</td>
+                              </tr>
+                          </table>
+                       </td>  
+          </tr>
+                  <tr>
+            <td bgcolor="#bebada">
+                      </td>
+                      <td><a class="two" id="NA" href = "#">Canada</a>
+                           <table class="table2">
+                              <tr>
+                                  <td><h3>Countries/Regions</h3></td>
+                              </tr>
+                              <tr>
+                                  <td>Canada</td>
+                              </tr>
+                          </table>
+                       </td>  
+          </tr>
+                  <tr>
+            <td bgcolor="#fb8072">
+                      </td>
+                      <td><a class="two" id="NA" href = "#">China</a>
+                           <table class="table2">
+                              <tr>
+                                  <td><h3>Countries/Regions</h3></td>
+                              </tr>
+                              <tr>
+                                  <td>China<br>Hong Kong<br>Macao<br>Taiwan</td>
+                              </tr>
+                          </table>
+                       </td>  
+          </tr>
+                  <tr>
+            <td bgcolor="#80b1d3">
+                      </td>
+                      <td><a class="two" id="NA" href = "#">EU15</a>
+                           <table class="table2">
+                              <tr>
+                                  <td><h3>Countries/Regions</h3></td>
+                              </tr>
+                              <tr>
+                                  <td>Austria<br>Belgium<br>Denmark<br>Finland<br>France<br>Germany<br>Greece<br>Ireland<br>Italy<br>Luxembourg<br>Netherlands<br>Portugal<br>Spain<br>Sweden<br>United Kingdom</td>
+                              </tr>
+                          </table>
+                       </td>  
+          </tr>
+                  <tr>
+            <td bgcolor="#ccebc5">
+                      </td>
+                      <td><a class="two" id="NA" href = "#">Latin America</a>
+                           <table class="table2">
+                              <tr>
+                                  <td><h3>Countries/Regions</h3></td>
+                              </tr>
+                              <tr>
+                                  <td>Anguilla<br>Antigua Barbuda<br>Argentina<br>Aruba<br>Bahamas<br>Barbados<br>Belize<br>Bermuda<br>Bolivia<br>Brazil<br>Cayman Is<br>Chile<br>Colombia<br>Costa Rica<br>Cuba<br>Curacao<br>Dominica Is<br>Dominican Rep<br>Ecuador<br>El Salvador<br>Falkland Is<br>French Guiana<br>Grenada Is<br>Guadeloupe<br>Guatemala<br>Guyana<br>Haiti<br>Honduras<br>Jamaica<br>Martinique<br>Mexico<br>Montserrat Is<br>Nicaragua<br>Panama<br>Paraguay<br>Peru<br>Sint Maarten<br>St Kitts-Nevis<br>St Lucia Is<br>St Pierre & Miq<br>St Vinc & Gren<br>Suriname<br>Trin & Tobago<br>Turks & Caic Is<br>Uruguay<br>Venezuela</td>
+                              </tr>
+                          </table>
+                       </td>  
+          </tr>
+                  <tr>
+            <td bgcolor="#b3de69">
+                      </td>
+                      <td><a class="two" id="NA" href = "#">Middle East</a>
+                           <table class="table2">
+                              <tr>
+                                  <td><h3>Countries/Regions</h3></td>
+                              </tr>
+                              <tr>
+                                  <td>Afghanistan<br>Armenia<br>Bahrain<br>Iran<br>Iraq<br>Israel<br>Jordan<br>Kuwait<br>Kyrgyzstan<br>Lebanon<br>Oman<br>Qatar<br>Saudi Arabia<br>Syria<br>Tajikistan<br>Turkmenistan<br>United Arab Em<br>Uzbekistan<br>Yemen</td>
+                              </tr>
+                          </table>
+                       </td>  
+          </tr>
+                  <tr>
+            <td bgcolor="#fccde5">
+                      </td>
+                      <td><a class="two" id="NA" href = "#">Other Asian</a>
+                           <table class="table2">
+                              <tr>
+                                  <td><h3>Countries/Regions</h3></td>
+                              </tr>
+                              <tr>
+                                  <td>Cambodia<br>India<br>Indonesia<br>Japan<br>Korea<br>Laos<br>Malaysia<br>Maldive Is<br>Mongolia<br>Nepal<br>Pakistan<br>Philippines<br>Singapore<br>Sri Lanka<br>Thailand<br>Timor-Leste<br>Vietnam</td>
+                              </tr>
+                          </table>
+                       </td>  
+          </tr>
+                  <tr>
+            <td bgcolor="#d9d9d9">
+                      </td></td>
+                      <td><a class="two" id="NA" href = "#">Other Europe</a>
+                           <table class="table2">
+                              <tr>
+                                  <td><h3>Countries/Regions</h3></td>
+                              </tr>
+                              <tr>
+                                  <td>Albania<br>Andorra<br>Azerbaijan<br>Belarus<br>Bosnia-Hercegov<br>Bulgaria<br>Croatia<br>Cyprus<br>Czech Republic<br>Estonia<br>Georgia<br>Hungary<br>Iceland<br>Kazakhstan<br>Kosovo<br>Latvia<br>Liechtenstein</td>
+                                  <td>Lithuania<br>Macedonia<br>Malta<br>Moldova<br>Monaco<br>Montenegro<br>Norway<br>Poland<br>Romania<br>Russia<br>San Marino<br>Serbia<br>Slovak Republic<br>Slovenia<br>Switzerland<br>Turkey<br>Ukraine<br>Vatican City</td>
+                              </tr>
+                          </table>
+                       </td>  
+          </tr>
+                  <tr>
+            <td bgcolor="#bc80bd">
+                      </td>
+                      <td><a class="two" id="NA" href = "#">Others</a>
+                           <table class="table2">
+                              <tr>
+                                  <td><h3>Countries/Regions</h3></td>
+                              </tr>
+                              <tr>
+                                  <td>Bangladesh<br>Bhutan<br>Br  Virgin Is<br>Br Indian O Ter<br>Brunei<br>Burma (Myanmar)<br>Christmas Is<br>Cocos Is<br>Cook Is<br>Faroe Islands<br>Fr Polynesia<br>Fr S & Ant land<br>Gaza Strip<br>Gibraltar<br>Greenland<br>Heard & McDn Is<br>New Caledonia<br>Niue<br>Norfolk Is<br>Pitcairn Is<br>St Helena<br>Svalbard,May Is<br>Tokelau Is<br>Wallis & Futuna<br>West Bank</td>
+                              </tr>
+                          </table>
+                       </td>  
+          </tr>
+          <tr><td></td><td><hr></td></tr>
+                  <tr>
+            <td bgcolor="#fdb462">
+                      </td>
+                      <td><a class="two" id="NA" href = "#">The United States</a>
+                           <table class="table2">
+                              <tr>
+                                  <td><h3>Countries/Regions</h3></td>
+                              </tr>
+                              <tr>
+                                  <td>The United States</td>
+                              </tr>
+                          </table>
+                       </td>  
+                      </tr>
+               </table>
+           </div> 
+
+</div> 
+<div class="w3-top">
+    <div class="w3-row w3-padding w3-black">
+      <div class="w3-col s3">
+        <a href="tryw3css_templates_cafe.html" class="w3-button w3-block w3-black">HOME</a>
+      </div>
+      <div class="w3-col s3">
+        <a href="index.html" class="w3-button w3-block w3-black">Trade Map</a>
+      </div>
+      <div class="w3-col s3">
+        <a href="trade_flow.html" class="w3-button w3-block w3-black">Trade Flow</a>
+      </div>
+      <div class="w3-col s3">
+        <a href="search.html" class="w3-button w3-block w3-black">Search the Data</a>
+      </div>
+    </div>
+  </div>   
+
+
+  <script type="text/javascript" src="flowChart.js"></script>
+</body>
+</html>

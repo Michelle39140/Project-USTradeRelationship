@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trade/Tariffs Data</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+  <h1 align ="center"><strong><b> Trade/Tariffs Data</h1></strong></b> 
+  <center><img src="Timeline-Tariff.jpg" style="max-width: 100%;"--></img></center>
+   <p></p>
+   <p></p>
+   <p></p>
+</head>
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="tryw3css_templates_cafe.html" class="w3-button w3-block w3-black">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="index.html" class="w3-button w3-block w3-black">Trade Map</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="trade_flow.html" class="w3-button w3-block w3-black">Trade Flow</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="search.html" class="w3-button w3-block w3-black">Search the Data</a>
+    </div>
+  </div>
+</div>
+
+<body>
+  <div class="w3-row w3-padding w3-white">
+            <div class="col-md-3">
+              <input type="text" class="w3-button w3-block w3-white" id="sitc_numinput" placeholder="Products">
+            </div>
+            <div class="row"></div>
+            <div class="col-md-3">
+              <input type="text" class="w3-button w3-block w3-white" id="stateinput" placeholder="State">
+            </div>
+            <div class="row"></div>
+            <div class="col-md-3">
+              <input type="text" class="w3-button w3-block w3-white" id="countryinput" placeholder="Country">
+            </div>
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-md-3">
+        </div>
+        <br><br>
+        <div class="row"> 
+          <div class="col-md-4" align ="center">
+            <a id="search" class="btn btn-default" >Search</a>
+
+          </div>
+        </div>
+    </div>
+    </div>
+  <br><br>
+  </div>
+</div>
+  <div class="col-md-12">
+  	<div class="row" align ="center"> 
+		<br><br>
+    	<input type="button" id="first" onclick="firstPage()" value="First" />
+    	<input type="button" id="next" onclick="nextPage()" value="Next" />
+    	<input type="button" id="previous" onclick="previousPage()" value="Previous" />
+    	<input type="button" id="last" onclick="lastPage()" value="Last" />
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	<strong><input type="text" id="Page" readonly="readonly" /></strong>
+    	<div id="list"></div>
+  	</div>
+   	<table class="table table-striped">
+    	<thead>
+        	<tr>
+              <th>JAN_2017</th>
+              <th>FEB_2017</th>
+              <th>MAR_2017</th>
+              <th>CD/CV</th>
+              <th>APR_2017</th>
+              <th>MAY_2017</th>
+              <th>JUN_2017</th>
+              <th>JUL_2017</th>
+              <th>AUG_2017</th>
+              <th>SEP_2017</th>
+              <th>OCT_2017</th>
+              <th>NOV_2017</th>
+              <th>DEC_2017</th>
+              <th>JAN_2018</th>
+              <th>FEB_2018</th>
+              <th>MAR_2018</th>
+              <th>APR_2018</th>
+              <th>MAY_2018</th>
+              <th>JUN_2018</th>
+              <th>JUL_2018</th>
+              <th>Country</th>
+              <th>District/City</th>
+              <th>Products</th>
+              <th>State</th>
+            </tr>
+         </thead>
+      	 <tbody>
+         </tbody>
+    </table>
+   </div>
+</div>
+  
+ <script src="ufodata.js" type="text/javascript"></script>
+ <script src="aliens.js" type="text/javascript"></script>
+ <footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  <p>Powered by CRITILYTICS</p>
+  </footer>
+</body>
+</html>
