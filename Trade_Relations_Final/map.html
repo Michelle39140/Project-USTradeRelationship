@@ -3,38 +3,35 @@
 <head>
   <meta charset="utf-8">
   <title>Tariffs - World View</title>
+   
 
   <!-- Leaflet CSS & JS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
-  integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
-  crossorigin=""/>
-  <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
-  integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
-  crossorigin=""></script>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">  
-
-  <!-- Our CSS -->
-  <link rel="stylesheet" type="text/css" href="map_style.css">
-  <div class="w3-top">
-      <div class="w3-row w3-padding w3-black">
-        <div class="w3-col s3">
-          <a href="tryw3css_templates_cafe.html" class="w3-button w3-block w3-black">HOME</a>
-        </div>
-        <div class="w3-col s3">
-          <a href="index.html" class="w3-button w3-block w3-black">Trade Map</a>
-        </div>
-        <div class="w3-col s3">
-          <a href="trade_flow.html" class="w3-button w3-block w3-black">Trade Flow</a>
-        </div>
-        <div class="w3-col s3">
-          <a href="#where" class="w3-button w3-block w3-black">Search the Data</a>
-        </div>
-      </div>
-  </div>
+  <title>U.S. Trade Relations</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+crossorigin=""></script>
+   <!-- Our CSS -->
+   <link rel="stylesheet" type="text/css" href="map_style.css">
+   <link rel="stylesheet" type="text/css" href="landing.css">
 </head>
-
+ 
 <body>
+
+  <!--Navigation bar-->
+  <nav id="navMenu"></nav>
+  
+ 
+  <!--end of Navigation bar-->
+
+
   <!-- The div where we will inject our map -->
   <div id="map"></div>
 
@@ -42,5 +39,7 @@
   <script type="text/javascript" src="config.js"></script>
   <!-- Our JS -->
   <script type="text/javascript" src="logic.js"></script>
+  <script type="text/javascript" src="nav.js"></script>
+  
 </body>
 </html>
