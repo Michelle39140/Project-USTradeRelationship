@@ -74,23 +74,23 @@ var info = L.control({
 //create new markers
 
 var Canmarker = L.marker( [56.41117, -96.69812])
-    .bindPopup ("CANADA <br> 2017-Total US Imports from Canada to US = $298,616,595,151 <br> 2017-Total US Exports from US to Canada = $233,705,104,333 <br> 2018-Total US Imports from Canada to US =$215,482,647,147 <br> 2018-Total US Exports from US to Canada = $166,861,006,646")
+    .bindPopup ("<h4> Canada and US</h4> <br> <h3>Imports</h3> 2017YTD - $197,519,122,560 <br> 2018YTD = $215,482,647,147 <p> <h3>Exports</h3> 2017YTD= $154,430,185,091 <br> 2018YTD= $166,861,006,6466")
     .addTo(myMap)
     .openPopup(Canmarker);
 
 
 var Chinmarker = L.marker( [35.8592948, 104.1361118])
-    .bindPopup("China <br> 2017-Total US Imports from China to US = $517,490,666,110<br> 2017-Total US Exports from US to China = $119,978,922,069 <br> 2018-Total US Imports from China to US = $356,876,583,676 <br> 2018-Total US Exports from US to China = $76,637,783,832")
+    .bindPopup("<h4>China and US</h4> <br> <h3>Imports</h3> <br> 2017YTD = $$327,076,981,881 <br> 2018YTD = $356,876,583,676 <p> <h3>Exports</h3> 2017YTD  $119,978,922,069 <br> 2018YTD= $76,637,783,832")
     .addTo(myMap)
     .openPopup(Chinmarker);
 
   var Mexmarker = L.marker( [19.432608, -99.133209])
-      .bindPopup ("Mexico <br> 2017-Total US Imports from Mexico to US = $313,558,563,322 <br> 2017-Total US Exports from US to Mexico = $186,987,213,975 <br> 2018-Total US Imports from Mexico to US =$229,618,923,850 <br> 2018-Total US Exports from US to Mexico = $135,602,098,408")
+      .bindPopup ("<h4>Mexico and US</h4> <br> <h3>Import</h3> 2017YTD $206,358,101,678 <br> 2018YTD=$229,618,923,850 <br> <p> <h3> Exports</h3> <br> 2017YTD-$123,061,512,353 <br> 2018YTD = $135,602,098,408")
       .addTo(myMap)
       .openPopup(Mexmarker);
 
 var Euromarker = L.marker( [51.1657, 10.4515])
-    .bindPopup ("EURO 15 <br> 2017-Total US Imports from Euro15 to US = $410,564,388,038 <br> 2017-Total US Exports from US to Euro15 = $772,838,432,472 <br> 2018-Total US Imports from Euro15 to US = $306,018,666,369 <br>  2018-Total US Exports from US to Euro15 = $552,658,802,368")
+    .bindPopup ("<h4>EURO 15 and US</h4> <br> <h3> Imports</h3> <br> 2017YTD=$264,534,153,997 <br> 2018YTD=$306,018,666,369 <p> <h3>Exports</h3> 2017YTD= $502,978,891,172 <br> 2018YTD=$552,658,802,368<br>")
     .addTo(myMap)
     .openPopup(Euromarker)
 
