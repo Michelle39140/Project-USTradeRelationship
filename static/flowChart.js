@@ -4,7 +4,7 @@ var width = 760,
     outerRadius = Math.min(width, height) / 2 - 120,//100,
     innerRadius = outerRadius - 10;
 
-var dataset = "seventeen.json";
+var dataset = "../static/seventeen.json";
 //string url for the initial data set
 //would usually be a file path url, here it is the id
 //selector for the <pre> element storing the data
@@ -60,7 +60,7 @@ g.append("circle")
 //no callbacks required.
 
 
-d3.csv("regionsfish.csv", function(error, regionData) {
+d3.csv("../static/regionsfish.csv", function(error, regionData) {
 
     if (error) {alert("Error reading file: ", error.statusText); return; }
     
@@ -384,7 +384,7 @@ function chordTween(oldLayout) {
 
 /* Activate the buttons and link to data sets */
 d3.select("#seventeen").on("click", function () {
-    updateChords( "seventeen.json" );
+    updateChords( "../static/seventeen.json" );
     //replace this with a file url as appropriate
     
     //enable other buttons, disable this one
@@ -392,7 +392,7 @@ d3.select("#seventeen").on("click", function () {
 });
 
 d3.select("#eighteen").on("click", function() {
-    updateChords( "eighteen.json" );
+    updateChords( "../static/eighteen.json" );
     //disableButton(this);
 });
 
