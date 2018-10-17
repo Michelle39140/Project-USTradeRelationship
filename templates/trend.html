@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Trade Trends</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../static/style.css">
+  <script src="https://cdn.plot.ly/plotly-1.31.2.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../static/landing.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <div class="w3-top">
+        <div class="w3-row w3-padding w3-black">
+            <div class="w3-col s2">
+                <a href="/" class="w3-button w3-block w3-black">HOME</a>
+              </div>
+              <div class="w3-col s2">
+                <a href="/map" class="w3-button w3-block w3-black">Trade Map</a>
+              </div>
+              <div class="w3-col s2">
+                <a href="/trade_flow" class="w3-button w3-block w3-black">Trade Flow</a>
+              </div>
+              <div class="w3-col s2">
+                <a href="/search" class="w3-button w3-block w3-black">Search the Data</a>
+              </div>
+              <div class = "w3-col s2">
+                <a href= "/trend" class = "w3-button w3-block w3-black">Trends</a>
+              </div>
+            </div>
+          </div>
+
+  <div class="container">
+  <!---------------------title------------------------->
+    <div class="row">
+        <h1>Trade Trends</h1>
+    </div>
+    <!-----------------end of title----------------------->
+
+    <div class="row">
+        <!--select drop down-->
+        <div class="well">
+          <h5>SELECT Country:</h5>
+          <select class="btn btn-default" id="selDataset" ></select>
+          <h5>SELECT Commodity:</h5>
+          <select class="btn btn-default" id="selcom" ></select>
+          <br>
+          <button class="btn btn-default" id="run">Run</button>
+        </div>
+      </div>
+
+        <!--end of select drop down-->
+    <div class="row">
+      <!--pie chart-->
+      <div class="col-lg-6">
+        <div id="pie"></div>
+      </div>
+      <!--end of pie chart-->
+
+      <!--gauge chart-->
+      <div class="col-lg-6">
+        <div id="gauge"></div>
+      </div>
+      <!--end of gauge chart-->
+    </div>
+  </div>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="../static/js/app.js"></script>
+
+</body>
+
+</html>
