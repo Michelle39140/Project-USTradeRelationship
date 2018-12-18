@@ -1,31 +1,30 @@
- Proj2-Tariffs
-Critilytics Project Team's visualizations of the impact of recent Tariffs on US Imports and Exports
-#Team Members: Adrienne, LaKeisha, Pride, Sanhita, Solanda, Wusi
+# US Trade Relationship
 
-#Objective: 
-The objective is to analyze the export and import trade volume data between US and other countries.
+**Team Critilytics** 
+**Team Members**: Adrienne, LaKeisha, Pride, Sanhita, Solanda, Wusi
 
-#Purpose:
-The purpose is to visualize the effect of  tariffs on US imports and exports. 
+### Objective: Create a website to analyze and visualize the export and import trade volume data between US and other countries; Provide reference to help understand the impact of recent Tariffs on US Imports and Exports
 
-#Data Sources considered: 
-1.	https://www.uschamber.com/tariffs
-2.	https://dataweb.usitc.gov/
-3.	https://usatrade.census.gov
+**Data Sources**: U.S. merchandise trade and tariff data from [USITC DataWeb](https://dataweb.usitc.gov/)
+
+**Languages**: Python, JavaScript, HTML, CSS
+
+**Packages**: flask, pandas, sqlalchemy; d3.js, leaflet.js, plotly.js, aos.js
+
+**Database**: SQLite
+
+**Deployed on**: Heroku
 
 
-#Expected Outcome:
---Link to Mockup site - outcome-mockup.html (click on the navigation to see samples)
 
-#Description of outcome:
-The outcome will be a website with the following pages.
-•	Home Page – Content will be an interactive political world map with all the countries. The countries, when selected, will display the total volume of commodities(in terms of US Dollars) exported to and imported from the US.
-•	Commodities and Countries Search/Results Landing Page -
-  o	  A selection of countries(5)
-  o	A selection of commodities(5)
-  o	A selection of years(3)
-  o	When selected and searched, the results of the trade volume will be displayed based on the search criteria. The display format will be either in the form of a table or it will be a visual representation.
-•	Data Landing Page – Will display a sample dataset
-•	Visualization Page – Will display a visual representation of the trade flow analysis with a flow map
-•	Navigation: All pages will have a common navigation menu(if possible will have a location-based breadcrumb feature)
-•	Header/Footer- All Pages will have a common header and footer
+### The website is live here: https://tradetariffs.herokuapp.com/
+Website contents:
+* Home Page – introduction and background
+* Trade Map - interactive world map that displays the total volume of commodities(in terms of US Dollars) exported to and imported from the US for major countries/regions
+* Trade Flow - chord chart that visulaze the trade flow between the U.S. and the rest of the world, displayed by region
+* Data Page – displays a searchable dataset that's used in visualizations
+* Trends - allows user to select country/region and commodity of interest and plot the import/export trend over time
+
+
+**References**:[script created by Luz K. Molina](http://bl.ocks.org/databayou/c7ac49a23c275f0dd7548669595b8017#regionsfish.csv)
+
