@@ -2,7 +2,7 @@
 
 By **Team Critilytics** 
 
-***Team Members**: Adrienne, LaKeisha, Pride, Sanhita, Solanda, Wusi
+***Team Members***: Adrienne, LaKeisha, Pride, Sanhita, Solanda, Wusi
 
 **Objective**: Create a website to analyze and visualize the export and import trade volume data between US and other countries; Provide reference to help understand the impact of recent Tariffs on US Imports and Exports
 
