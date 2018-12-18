@@ -27,5 +27,6 @@ Website contents:
 * Trends - allows user to select country/region and commodity of interest and plot the import/export trend over time
 
 #
-* **References**: [script created by Luz K. Molina](http://bl.ocks.org/databayou/c7ac49a23c275f0dd7548669595b8017#regionsfish.csv)
+**Reference**: 
+* [script created by Luz K. Molina](http://bl.ocks.org/databayou/c7ac49a23c275f0dd7548669595b8017#regionsfish.csv)
 
