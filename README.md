@@ -21,10 +21,10 @@ By **Team Critilytics**
 ### The website is live here: https://tradetariffs.herokuapp.com/
 Website contents:
 * Home Page – introduction and background
-* Trade Map - interactive world map that displays the total volume of commodities(in terms of US Dollars) exported to and imported from the US for major countries/regions
+* Trade Map - interactive world map that displays the total volume of commodities(in terms of US Dollars) exported to and imported from the US for major countries/regions (Wusi)
 * Trade Flow - chord chart that visulaze the trade flow between the U.S. and the rest of the world, displayed by region
 * Data Page – displays a searchable dataset that's used in visualizations
-* Trends - allows user to select country/region and commodity of interest and plot the import/export trend over time
+* Trends - allows user to select country/region and commodity of interest and plot the import/export trend over time (Wusi)
 
 #
 **Reference**: 
